@@ -1,0 +1,12 @@
+C:\Users\Ionela\Desktop\Semestrul 1\TAS\ProiectTAS\ShoppingCart.Core\bin\Debug\net9.0\ShoppingCart.Core.deps.json
+C:\Users\Ionela\Desktop\Semestrul 1\TAS\ProiectTAS\ShoppingCart.Core\bin\Debug\net9.0\ShoppingCart.Core.dll
+C:\Users\Ionela\Desktop\Semestrul 1\TAS\ProiectTAS\ShoppingCart.Core\bin\Debug\net9.0\ShoppingCart.Core.pdb
+C:\Users\Ionela\Desktop\Semestrul 1\TAS\ProiectTAS\ShoppingCart.Core\obj\Debug\net9.0\ShoppingCart.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ionela\Desktop\Semestrul 1\TAS\ProiectTAS\ShoppingCart.Core\obj\Debug\net9.0\ShoppingCart.Core.AssemblyInfoInputs.cache
+C:\Users\Ionela\Desktop\Semestrul 1\TAS\ProiectTAS\ShoppingCart.Core\obj\Debug\net9.0\ShoppingCart.Core.AssemblyInfo.cs
+C:\Users\Ionela\Desktop\Semestrul 1\TAS\ProiectTAS\ShoppingCart.Core\obj\Debug\net9.0\ShoppingCart.Core.csproj.CoreCompileInputs.cache
+C:\Users\Ionela\Desktop\Semestrul 1\TAS\ProiectTAS\ShoppingCart.Core\obj\Debug\net9.0\ShoppingCart.Core.sourcelink.json
+C:\Users\Ionela\Desktop\Semestrul 1\TAS\ProiectTAS\ShoppingCart.Core\obj\Debug\net9.0\ShoppingCart.Core.dll
+C:\Users\Ionela\Desktop\Semestrul 1\TAS\ProiectTAS\ShoppingCart.Core\obj\Debug\net9.0\refint\ShoppingCart.Core.dll
+C:\Users\Ionela\Desktop\Semestrul 1\TAS\ProiectTAS\ShoppingCart.Core\obj\Debug\net9.0\ShoppingCart.Core.pdb
+C:\Users\Ionela\Desktop\Semestrul 1\TAS\ProiectTAS\ShoppingCart.Core\obj\Debug\net9.0\ref\ShoppingCart.Core.dll
