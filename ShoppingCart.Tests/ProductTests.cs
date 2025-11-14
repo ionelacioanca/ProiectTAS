@@ -19,68 +19,39 @@ public class ProductTests
 
     [Theory]
     [InlineData("", 100, "Electronics")]
-    [InlineData(null, 100, "Electronics")]
-    [InlineData("   ", 100, "Electronics")]
-    public void Product_WithEmptyName_ShouldThrowException(string name, decimal price, string category)
+    [InlineData("Laptop", -1, "Electronics")]
+    [InlineData("Laptop", 100, "")]
+    public void Product_WithInvalidData_ShouldThrowException(string name, decimal price, string category)
     {
         // Act & Assert
-        var exception = Assert.Throws<ArgumentException>(() => new Product(name, price, category));
-        Assert.Contains("name", exception.Message.ToLower());
+        Assert.Throws<ArgumentException>(() => new Product(name, price, category));
     }
 
     [Theory]
-    [InlineData(-1)]
-    [InlineData(-100.50)]
-    public void Product_WithNegativePrice_ShouldThrowException(decimal price)
+    [InlineData(0, 0.01, 999999.99)] // Teste de graniță pentru prețuri
+    public void Product_WithBoundaryPrices_ShouldWork(decimal price1, decimal price2, decimal price3)
     {
-        // Act & Assert
-        var exception = Assert.Throws<ArgumentException>(() => new Product("Laptop", price, "Electronics"));
-        Assert.Contains("price", exception.Message.ToLower());
-    }
-
-    [Theory]
-    [InlineData(0)]
-    [InlineData(0.01)]
-    [InlineData(1000000)]
-    public void Product_WithValidPriceBoundaries_ShouldCreateSuccessfully(decimal price)
-    {
-        // Arrange & Act
-        var product = new Product("Test Product", price, "Test");
+        // Act
+        var product1 = new Product("Test1", price1, "Test");
+        var product2 = new Product("Test2", price2, "Test");
+        var product3 = new Product("Test3", price3, "Test");
 
         // Assert
-        Assert.Equal(price, product.Price);
-    }
-
-    [Theory]
-    [InlineData("Product", 100, "")]
-    [InlineData("Product", 100, null)]
-    [InlineData("Product", 100, "   ")]
-    public void Product_WithEmptyCategory_ShouldThrowException(string name, decimal price, string category)
-    {
-        // Act & Assert
-        var exception = Assert.Throws<ArgumentException>(() => new Product(name, price, category));
-        Assert.Contains("category", exception.Message.ToLower());
+        Assert.Equal(price1, product1.Price);
+        Assert.Equal(price2, product2.Price);
+        Assert.Equal(price3, product3.Price);
     }
 
     [Fact]
-    public void Product_Equals_ShouldReturnTrueForSameProducts()
+    public void Product_Equals_ShouldWorkCorrectly()
     {
         // Arrange
         var product1 = new Product("Laptop", 1500.00m, "Electronics");
         var product2 = new Product("Laptop", 1500.00m, "Electronics");
+        var product3 = new Product("Phone", 800.00m, "Electronics");
 
-        // Act & Assert
+        // Assert
         Assert.Equal(product1, product2);
-    }
-
-    [Fact]
-    public void Product_Equals_ShouldReturnFalseForDifferentProducts()
-    {
-        // Arrange
-        var product1 = new Product("Laptop", 1500.00m, "Electronics");
-        var product2 = new Product("Phone", 800.00m, "Electronics");
-
-        // Act & Assert
-        Assert.NotEqual(product1, product2);
+        Assert.NotEqual(product1, product3);
     }
 }

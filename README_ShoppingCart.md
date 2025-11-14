@@ -110,11 +110,11 @@ dotnet test --filter "FullyQualifiedName~PaymentServiceTests"
 
 ## Statistici Teste
 
-- **Total teste**: 85
-- **ProductTests**: 8 teste
-- **ShoppingCartTests**: 25 teste
-- **DiscountServiceTests**: 16 teste (incluzând spy-uri)
-- **PaymentServiceTests**: 36 teste (incluzând mock-uri complexe)
+- **Total teste**: 20 (27 execuții cu theory tests)
+- **ProductTests**: 4 teste
+- **ShoppingCartTests**: 6 teste
+- **DiscountServiceTests**: 4 teste (incluzând spy-uri)
+- **PaymentServiceTests**: 6 teste (incluzând mock-uri)
 
 ## Exemple de Utilizare
 
